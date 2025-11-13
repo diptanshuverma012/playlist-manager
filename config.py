@@ -10,7 +10,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).parent
 
 # Storage Configuration
-USE_MYSQL = True  # Set to False to use JSON file storage
+USE_MYSQL = False  # Set to True to use MySQL database storage
 
 MYSQL_CONFIG = {
     'host': 'localhost',
