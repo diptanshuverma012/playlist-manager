@@ -1,0 +1,27 @@
+{
+    "testuser": {
+        "password": "testpass",
+        "playlists": {
+            "happy": [
+                "Happy - Pharrell Williams",
+                "Can't Stop the Feeling - Justin Timberlake",
+                "Uptown Funk - Bruno Mars"
+            ],
+            "sad": [
+                "Someone Like You - Adele",
+                "Let Her Go - Passenger",
+                "Fix You - Coldplay"
+            ],
+            "energetic": [
+                "Stronger - Kanye West",
+                "Eye of the Tiger - Survivor",
+                "Titanium - David Guetta ft. Sia"
+            ],
+            "calm": [
+                "Weightless - Marconi Union",
+                "River Flows in You - Yiruma",
+                "Sunrise - Norah Jones"
+            ]
+        }
+    }
+}
