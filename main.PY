@@ -17,10 +17,19 @@ PLAYLIST_FILE = str(JSON_CONFIG['file_path'])
 # Initialize database connection if using MySQL
 db = None
 if USE_MYSQL:
-    db = PlaylistDatabase(**MYSQL_CONFIG)
-    db.create_database()
-    db.connect()
-    db.create_table()
+    try:
+        db = PlaylistDatabase(**MYSQL_CONFIG)
+        db.create_database()
+        if db.connect():
+            db.create_table()
+        else:
+            print("⚠️ MySQL connection failed. Falling back to JSON storage.")
+            USE_MYSQL = False
+            db = None
+    except Exception as e:
+        print(f"⚠️ MySQL initialization failed: {e}. Falling back to JSON storage.")
+        USE_MYSQL = False
+        db = None
 
 # Default playlists
 default_playlists = DEFAULT_PLAYLISTS
